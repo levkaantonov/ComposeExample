@@ -1,4 +1,4 @@
-package levkaantonov.com.study.composeexample.theme
+package levkaantonov.com.study.composeexample.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
