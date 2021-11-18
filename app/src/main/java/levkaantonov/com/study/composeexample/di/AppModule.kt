@@ -10,6 +10,7 @@ import levkaantonov.com.study.composeexample.feature_note.data.data_source.NoteD
 import levkaantonov.com.study.composeexample.feature_note.data.data_source.NoteDatabase
 import levkaantonov.com.study.composeexample.feature_note.data.repository.NoteRepositoryImpl
 import levkaantonov.com.study.composeexample.feature_note.domain.repository.NoteRepository
+import levkaantonov.com.study.composeexample.feature_note.domain.use_case.AddNote
 import levkaantonov.com.study.composeexample.feature_note.domain.use_case.DeleteNote
 import levkaantonov.com.study.composeexample.feature_note.domain.use_case.GetNotes
 import levkaantonov.com.study.composeexample.feature_note.domain.use_case.NoteUseCases
@@ -40,7 +41,8 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUseCases {
         return NoteUseCases(
             getNotes = GetNotes(repository),
-            deleteNote = DeleteNote(repository)
+            deleteNote = DeleteNote(repository),
+            addNote = AddNote(repository)
         )
     }
 }
